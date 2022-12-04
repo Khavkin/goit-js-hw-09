@@ -91,7 +91,7 @@ function addStyleSheetRules() {
   // Grab style element's sheet
   const styleSheet = styleEl.sheet;
 
-  for (st of styles) {
+  for (const st of styles) {
     styleSheet.insertRule(st);
   }
 }
