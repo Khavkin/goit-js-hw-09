@@ -14,7 +14,7 @@ const onSubmit = event => {
     }, {}); // get values from form elements;
 
   for (let i = 0; i < amount; i += 1) {
-    createPromise(i, delay + step * i)
+    createPromise(i + 1, delay + step * i)
       .then(({ position, delay }) => {
         Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
       })
