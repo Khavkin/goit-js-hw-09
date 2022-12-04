@@ -1,8 +1,14 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 let timerDate;
 let timerId;
+
+Notify.init({
+  position: 'center-top',
+});
+
 const options = {
   enableTime: true,
   time_24hr: true,
@@ -14,7 +20,7 @@ const options = {
     if (Date.now() < timerDate) btnStart.disabled = false;
     else {
       btnStart.disabled = true;
-      //show message
+      Notify.failure('Please choose a date in the future');
     }
   },
 };
