@@ -16,7 +16,7 @@ const options = {
   minuteIncrement: 1,
   onClose(selectedDates) {
     timerDate = selectedDates[0];
-    // console.log(convertMs(selectedDates[0] - Date.now()));
+    //console.log(Date.now() < timerDate);
     if (Date.now() < timerDate) btnStart.disabled = false;
     else {
       btnStart.disabled = true;
