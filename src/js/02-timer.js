@@ -49,7 +49,7 @@ function showTimer() {
   const timerParts = ['days', 'hours', 'minutes', 'seconds'];
   const timerObj = convertMs(timerDate - Date.now());
 
-  for (tp of timerParts) {
+  for (const tp of timerParts) {
     timer.filter(el => tp in el.dataset)[0].innerHTML = addLeadingZero(
       timerObj[tp].toString()
     );
